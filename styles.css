@@ -23,11 +23,19 @@ body {
   background-color: #ffffff;
   color: var(--accent-5);
   padding: 0 1rem;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 800px) {
   body {
     padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    padding: 0 2.5rem 1.25rem;
   }
 }
 
@@ -81,7 +89,7 @@ h4 {
 @media screen and (min-width: 800px) {
   .header {
     position: static;
-    padding: 1.25rem 0;
+    padding: 1.25rem 0 1rem;
     z-index: 99;
   }
 }
@@ -277,6 +285,14 @@ main {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    font-size: 10rem;
+    line-height: 85%;
+    margin-bottom: 15rem;
+  }
+}
+
 .hero__background {
   position: relative;
   background-color: var(--accent-3);
@@ -301,6 +317,13 @@ main {
   .hero__background::before {
     content: url("images/device-tablet.svg");
     top: -4.75rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero__background::before {
+    content: url("images/device-desktop.svg");
+    top: -10.125rem;
   }
 }
 
@@ -335,6 +358,12 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .company__logo--placeholder {
+    max-width: 9.625rem;
+  }
 }
 
 .benefits {
@@ -379,6 +408,12 @@ main {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .benefits__heading--title {
+    font-size: 0.75rem;
+  }
+}
+
 .benefits__heading--description-highlight {
   color: var(--accent-4);
   font-family: "Crimson Text", sans-serif;
@@ -391,6 +426,12 @@ main {
 @media screen and (min-width: 800px) {
   .benefits__heading--description-highlight {
     font-size: 3.375rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .benefits__heading--description-highlight {
+    font-size: 3.75rem;
   }
 }
 
@@ -435,6 +476,13 @@ main {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .benefits__card {
+    flex-basis: 17.8125rem;
+    /* min-width: 17.8125rem; */
+  }
+}
+
 .benefits__card--logo-container {
   display: flex;
   justify-content: center;
@@ -473,6 +521,12 @@ main {
   height: 37.5rem;
 }
 
+@media screen and (min-width: 1280px) {
+  .benefits__image--container {
+    height: 38.75rem;
+  }
+}
+
 .benefits__image--container img {
   height: 100%;
   width: 100%;
@@ -492,6 +546,15 @@ main {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .features {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+}
+
 .features__content {
   display: flex;
   flex-direction: column;
@@ -505,6 +568,12 @@ main {
 @media screen and (min-width: 800px) {
   .features__content {
     margin-bottom: 4.25rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .features__content {
+    flex: 1;
   }
 }
 
@@ -533,6 +602,12 @@ main {
   .features__heading--title {
     font-size: 3.375rem;
     line-height: 90%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .features__heading--title {
+    font-size: 3.75rem;
   }
 }
 
@@ -601,6 +676,13 @@ main {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .features__background--placeholder {
+    height: 44.4375rem;
+    flex: 1;
+  }
+}
+
 .features__background--placeholder img {
   width: 100%;
   height: 100%;
@@ -631,6 +713,12 @@ main {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .specs__heading {
+    padding: 5rem 15rem;
+  }
+}
+
 .specs__heading--title {
   color: var(--accent-1);
   font-family: "Roboto Mono", "monospace";
@@ -648,6 +736,12 @@ main {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .specs__heading--title {
+    font-size: 0.75rem;
+  }
+}
+
 .specs__heading--title-caption {
   font-family: "Crimson Text", sans-serif;
   font-weight: 400;
@@ -661,6 +755,12 @@ main {
   .specs__heading--title-caption {
     font-size: 3.375rem;
     line-height: 90%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .specs__heading--title-caption {
+    font-size: 3.75rem;
   }
 }
 
@@ -779,6 +879,12 @@ tr {
     }
   }
 
+  @media screen and (min-width: 1280px) {
+    tbody tr td {
+      font-size: 0.75rem;
+    }
+  }
+
   .checked--primary::before {
     content: url("icons/checked-green.svg");
     width: 0.875rem;
@@ -814,8 +920,24 @@ tr {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .testimonials {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+}
+
 .testimonials__image--container {
   margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .testimonials__image--container {
+    flex: 1;
+    min-width: 36.875rem;
+    margin-bottom: 0;
+  }
 }
 
 .testimonials__image--container img {
@@ -824,6 +946,12 @@ tr {
   height: auto;
   aspect-ratio: 1/1;
   object-fit: cover;
+}
+
+@media screen and (min-width: 1280px) {
+  .testimonials__image--container img {
+    aspect-ratio: 590/670;
+  }
 }
 
 .testimonials__content {
@@ -841,6 +969,15 @@ tr {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .testimonials__content {
+    flex: 1;
+    padding: 8.75rem 0 0 3.125rem;
+    justify-content: flex-start;
+    min-width: 0;
+  }
+}
+
 .testimonials__quote {
   color: var(--accent-4);
   font-family: "Crimson Text", sans-serif;
@@ -855,10 +992,24 @@ tr {
     font-size: 2.5rem;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .testimonials__quote {
+    line-height: 105%;
+  }
+}
+
 .testimonials__caption {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .testimonials__caption {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .testimonials__author--name {
@@ -880,6 +1031,12 @@ tr {
 @media screen and (min-width: 800px) {
   .testimonials__author--title {
     font-size: 0.6875rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .testimonials__author--title {
+    font-size: 0.75rem;
   }
 }
 
@@ -920,6 +1077,13 @@ tr {
   line-height: 95%;
   text-align: center;
   letter-spacing: -3%;
+}
+
+@media screen and (min-width: 1280px) {
+  .process__heading--title {
+    font-size: 3.75rem;
+    line-height: 90%;
+  }
 }
 
 .process__list--container {
@@ -1030,6 +1194,12 @@ tr {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .cta {
+    padding: 7.5rem 18.75rem;
+  }
+}
+
 .cta--title {
   font-family: "Crimson Text", sans-serif;
   font-weight: 400;
@@ -1043,6 +1213,12 @@ tr {
   .cta--title {
     font-size: 3.375rem;
     line-height: 90%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .cta--title {
+    font-size: 3.75rem;
   }
 }
 
