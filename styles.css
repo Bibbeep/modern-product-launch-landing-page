@@ -305,7 +305,7 @@ main {
 }
 
 .hero__background::before {
-  content: url("images/device-mobile.svg");
+  content: url("images/device-mobile.webp");
   position: absolute;
   bottom: -8.125rem;
   left: 50%;
@@ -315,14 +315,14 @@ main {
 
 @media screen and (min-width: 800px) {
   .hero__background::before {
-    content: url("images/device-tablet.svg");
+    content: url("images/device-tablet.webp");
     top: -4.75rem;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .hero__background::before {
-    content: url("images/device-desktop.svg");
+    content: url("images/device-desktop.webp");
     top: -10.125rem;
   }
 }

@@ -61,7 +61,7 @@ navLinks.forEach((a) => {
   a.addEventListener("click", () => {
     if (window.matchMedia("(max-width: 799px)").matches) {
       if (!navDropdown.classList.contains("hidden")) {
-        navDropdown.classList.toggle("hidden");
+        setTimeout(() => navDropdown.classList.toggle("hidden"), 150);
       }
     }
   });
