@@ -13,6 +13,45 @@ function toggleOnTopClass() {
   }
 }
 
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("scroll-pending");
+        entry.target.classList.add("scroll-reveal");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  },
+);
+
+const onViewAnimateClasses = [
+  ".hero",
+  ".company",
+  ".benefits__heading",
+  ".benefits__card",
+  ".benefits__image--container",
+  ".features__content",
+  ".features__background--placeholder",
+  ".specs__heading",
+  ".specs__table--container",
+  ".testimonials__image--container",
+  ".testimonials__content",
+  ".process__heading",
+  ".process__item",
+  ".hero-image__container",
+  ".cta",
+];
+const queryClasses = onViewAnimateClasses.join(", ");
+
+document.querySelectorAll(queryClasses).forEach((el) => {
+  el.classList.add("scroll-pending");
+  observer.observe(el);
+});
+
 window.addEventListener("resize", () => {
   if (
     window.matchMedia("(min-width: 800px)").matches &&
